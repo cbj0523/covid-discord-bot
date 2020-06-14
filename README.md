@@ -12,3 +12,6 @@
 
 ## 사용방법 소개
 https://chungwoldevelop.tistory.com/54  - 제작자가 직접 포스팅하였습니다.
+
+## 디스코드 봇 추가
+https://discord.com/oauth2/authorize?client_id=714354420154105886&permissions=18432&scope=bot
