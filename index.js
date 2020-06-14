@@ -37,9 +37,8 @@ client.on('message', msg => {
   }
 
   if(command[0] == "코로나") {
-    request('http://dev.api.corona.koreal.io/all', (err, res, body) => {
+    request('https://rok-corona19-api.herokuapp.com/domestic', (err, res, body) => {
       let json = JSON.parse(body);
-      json = json["domestic"];
 
       let COVIDEmbed = new Discord.MessageEmbed()
         .setColor('#00ff9d')
@@ -59,9 +58,8 @@ client.on('message', msg => {
   }
 
   if(command[0] == "지역코로나" && command.length == 1) {
-      request('http://dev.api.corona.koreal.io/all', (err, res, body) => {
+      request('https://rok-corona19-api.herokuapp.com/local', (err, res, body) => {
         let json = JSON.parse(body);
-        json = json["local"];
         let localData = [];
 
         for (let i = 0; i < 18; i++) {
@@ -85,9 +83,8 @@ client.on('message', msg => {
   }
 
   if(command[0] == "지역코로나" && command[1]) {
-    request('http://dev.api.corona.koreal.io/all', (err, res, body) => {
+    request('https://rok-corona19-api.herokuapp.com/local', (err, res, body) => {
         let json = JSON.parse(body);
-        json = json["local"]
         let localData = [];
 
         for (let i = 0; i < 18; i++) {
